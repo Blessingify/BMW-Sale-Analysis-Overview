@@ -33,9 +33,29 @@ select COUNTRY, CITY, ROUND(avg(SALES),1) AQORDER
 from Auto_Sales_data
 group by country,CITY
 order by AQORDER DESC
+
+select PRODUCTLINE, sum(QUANTITYORDERED) as total_quantity
+ from Auto_Sales_data 
+ group by PRODUCTLINE
+
+select country, round(sum(sales),0) as total_sales
+from Auto_Sales_data
+GROUP by COUNTRY
+order by total_sales desc
+
+select COUNTRY, CITY, ROUND(avg(SALES),1) AQORDER
+from Auto_Sales_data
+group by country,CITY
+order by AQORDER DESC
+
+select CUSTOMERNAME, round(Sum(SALES),0) totalsales
+from Auto_Sales_data 
+ group by CUSTOMERNAME
+ order by  totalsales DESC
+ limit 10
+                         
+
 ```
-
-
 
 
 ### Insights

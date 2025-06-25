@@ -7,20 +7,43 @@ This report provides a comprehensive analysis of the company’s sales data acro
 ![Dashboard 3](https://github.com/user-attachments/assets/ad3d228c-3516-4bbe-bbb6-dc6fc800be1c)
 [click here to interact with table](https://public.tableau.com/views/BMWSALEREPORT/Dashboard3?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-###  Problem Statement
-While total sales have grown significantly, there is an imbalance in performance across different product lines and regions. Some product categories, such as Trains and Ships, contribute minimally, and certain regions remain under-penetrated. Additionally, customer sales are highly concentrated in a few key clients, posing a potential risk if those relationships are disrupted.
+### Tools 
+- Excel - Data Cleaning
+- SQL - Data Analysis
+- Tableau - Creating reports
 
-### Objectives
+### Data Cleaning/ Preparation 
+In the inital data perparation phrase, the following task was performed:
+1. Data loading and inspection
+2. Checking of missing values and duplicates
+3. Data cleaning and formatting.
+
+
+
+###  Exploratory Data Analysis
  -	To analyze the overall sales performance by region, product line, and customer segment.
  -	To identify the top-performing and underperforming areas in terms of product and geography.
  -	To understand trends over time and their implications for business planning.
  -	To provide actionable recommendations to enhance revenue, optimize inventory, and improve market penetration.
 
+### Data Analysis
+Intresting code/ features worked with:
+``` sql
+select COUNTRY, CITY, ROUND(avg(SALES),1) AQORDER
+from Auto_Sales_data
+group by country,CITY
+order by AQORDER DESC
+```
+
+
+
+
 ### Insights
 - Classic Cars dominate sales performance, followed by Vintage Cars. Trains and Ships contribute the least.
 - Q4 consistently experiences sales spikes, especially in 2019. This reflects strong seasonality in purchasing behavior.
-
-### Observation 
+- While total sales have grown significantly, there is an imbalance in performance across different product lines and regions. 
+- Some product categories, such as Trains and Ships, contribute minimally, and certain regions remain under-penetrated.
+- Additionally, customer sales are highly concentrated in a few key clients, posing a potential risk if those relationships are disrupted.
 - A small number of customers contribute a large portion of total revenue.
 - Sales are strong in North America and Western Europe, while emerging markets show room for expansion.
 
